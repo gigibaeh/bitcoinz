@@ -406,6 +406,12 @@ public:
             0
         };
 
+        // Hardcoded fallback value for the Sprout shielded value pool balance
+        // for nodes that have not reindexed since the introduction of monitoring
+        // in #2795.
+        nSproutValuePoolCheckpointHeight = 440329;
+        nSproutValuePoolCheckpointBalance = 40000029096803;
+
         // Founders reward script expects a vector of 2-of-3 multisig addresses
         vCommunityFeeAddress = {
             "t2FpKCWt95LAPVRed61YbBny9yz5nqexLGN",
