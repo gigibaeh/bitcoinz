@@ -411,6 +411,7 @@ public:
         // in #2795.
         nSproutValuePoolCheckpointHeight = 440329;
         nSproutValuePoolCheckpointBalance = 40000029096803;
+        fSproutValuePoolCheckpointEnabled = true;
 
         // Founders reward script expects a vector of 2-of-3 multisig addresses
         vCommunityFeeAddress = {
@@ -724,6 +725,10 @@ public:
         vCommunityFeeStartHeight = 200;
         vCommunityFeeLastHeight = 1400000;
         assert(vCommunityFeeAddress.size() <= GetLastCommunityFeeBlockHeight());
+
+        // Enable Sprout shielded value pool checkpointing on
+        // regtest.
+        fSproutValuePoolCheckpointEnabled = true;
     }
 
     void UpdateNetworkUpgradeParameters(Consensus::UpgradeIndex idx, int nActivationHeight)
