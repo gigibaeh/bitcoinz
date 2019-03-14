@@ -4111,7 +4111,6 @@ bool static LoadBlockIndexDB()
                     } else {
                         pindex->nChainSproutValue = boost::none;
                     }
-
                     if (pindex->pprev->nChainSaplingValue) {
                         pindex->nChainSaplingValue = *pindex->pprev->nChainSaplingValue + pindex->nSaplingValue;
                     } else {
